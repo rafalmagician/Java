@@ -5,6 +5,7 @@ public class ZliczanieWgKryterium {
     private int[] tablica = new int[20];
     private Losowanie losowanie = new Losowanie();
     Scanner scanner = new Scanner(System.in);
+    private int ile = 2;
 
     public void wyswietlanie() {
         uzupelnienieTablicy();
@@ -15,7 +16,7 @@ public class ZliczanieWgKryterium {
 
     private void uzupelnienieTablicy() {
         for (int i = 0; i < tablica.length; i++) {
-            tablica[i] = losowanie.losowanie();
+            tablica[i] = losowanie.losowanie(ile);
             System.out.print(tablica[i] + " ");
         }
         System.out.println();
