@@ -10,6 +10,7 @@ public class Main {
         ZliczanieWgKryterium zliczanieWgKryterium = new ZliczanieWgKryterium();
         WyszukiwanieMaxMin wyszukiwanieMaxMin = new WyszukiwanieMaxMin();
         JednoczesneWyszukiwanieMaxMin jednoczesneWyszukiwanieMaxMin = new JednoczesneWyszukiwanieMaxMin();
+        SortowaniePrzezWybor sortowaniePrzezWybor = new SortowaniePrzezWybor();
 
         boolean choise = false;
         while (!choise) {
@@ -20,6 +21,7 @@ public class Main {
             System.out.println("2 -> Zliczanie wg kryterium");
             System.out.println("3 -> Wyszukiwanie max i min");
             System.out.println("4 -> Jednoczesne wyszukiwanie max i min");
+            System.out.println("5 -> Sortowanie przez wybór");
             System.out.print("-> ");
             switch (scanner.nextInt()) {
                 case 0 -> choise = true;
@@ -27,6 +29,7 @@ public class Main {
                 case 2 -> zliczanieWgKryterium.wyswietlanie();
                 case 3 -> wyszukiwanieMaxMin.wypisanie();
                 case 4 -> jednoczesneWyszukiwanieMaxMin.wypisanie();
+                case 5 -> sortowaniePrzezWybor.wyswietlenieDanych();
             }
 
         }
