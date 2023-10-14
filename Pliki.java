@@ -11,6 +11,7 @@ public class Pliki {
         file = new File(fileName());
         System.out.println("Czy plik istnieje: " + isFileExists());
         createFile();
+        deleteFile();
     }
 
     private boolean isFileExists() {
@@ -28,5 +29,14 @@ public class Pliki {
             System.out.println("Plik już istnieje");
         }
         System.out.println();
+    }
+
+    private void deleteFile() {
+        System.out.print("Czy chcesz usunąć plik 't/n': ");
+        if ("T".equals(scanner.nextLine())) {
+            System.out.println("Plik został usunięty " + file.delete());
+        } else {
+            System.out.println("Plik NIE został usunięty");
+        }
     }
 }
