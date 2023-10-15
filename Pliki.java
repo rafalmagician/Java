@@ -15,10 +15,14 @@ public class Pliki {
             file = new File(fileName());
             createFile();
         } else {
-            System.out.println("Usunięcie pliku: ");
-            deleteFile();
-            System.out.println("Odczyt z pliku: ");
-            odczytPliku();
+            System.out.println("=== MENU ===");
+            System.out.println("1 -> USUWANIE");
+            System.out.println("2 -> ODCZYT");
+            System.out.print("-> ");
+            switch (scanner.nextInt()) {
+                case 1 -> deleteFile();
+                case 2 -> odczytPliku();
+            }
         }
         System.out.println();
     }
@@ -41,6 +45,7 @@ public class Pliki {
     }
 
     private void deleteFile() {
+        System.out.println("Usunięcie pliku: ");
         System.out.print("Czy chcesz usunąć plik 't/n': ");
         if ("t".equals(scanner.nextLine())) {
             System.out.print("Podaj nazwę pliku do usunięcia: ");
@@ -56,6 +61,7 @@ public class Pliki {
     }
 
     private void odczytPliku() throws FileNotFoundException {
+        System.out.println("Odczyt z pliku: ");
         System.out.print("Podaj nazwę pliku do odczytania: ");
         file = new File(fileName());
         Scanner odczyt = new Scanner(file);
