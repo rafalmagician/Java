@@ -7,6 +7,7 @@ public class Pliki {
     private File file;
     private Scanner scanner = new Scanner(System.in);
     private String wybor = "t";
+    private int choise;
 
     public void display() throws IOException {
         System.out.print("Czy chcesz utworzyć plik 't/n': ");
@@ -18,11 +19,16 @@ public class Pliki {
             System.out.println("=== MENU ===");
             System.out.println("1 -> USUWANIE");
             System.out.println("2 -> ODCZYT");
+            System.out.println("3 -> ZAPIS");
             System.out.print("-> ");
-            switch (scanner.nextInt()) {
+
+            choise = Integer.valueOf(scanner.nextLine());
+            switch (choise) {
                 case 1 -> deleteFile();
                 case 2 -> odczytPliku();
+                case 3 -> zapisDoPliku();
             }
+
         }
         System.out.println();
     }
@@ -65,6 +71,11 @@ public class Pliki {
         System.out.print("Podaj nazwę pliku do odczytania: ");
         file = new File(fileName());
         Scanner odczyt = new Scanner(file);
-        System.out.println(odczyt.nextLine());
+
+        System.out.println();
+        System.out.println("----- PLIK -----");
+        while (odczyt.hasNext()) {
+            System.out.println(odczyt.nextLine());
+        }
     }
 }
