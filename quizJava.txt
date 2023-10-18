@@ -1,0 +1,67 @@
+1. W jaki sposób zakomentować pojedyńczą linię?
+a. // komentarz
+b. # komentarz
+c. <!-- komentarz -->
+d. ** komentarz **
+
+2. Którego słowa kluczowego należy użyć, by przerwać wykonanie pętli?
+a. exit
+b. finally
+c. continue
+d. break
+
+3. Jaki będzie wynik poniższej operacji?
+int a = 10;
+int b = 3;
+System.out.println(a / b);
+a. 3.3333
+b. 3.0
+c. 3
+d. 3.3
+
+4. Który modyfikator dostępu sprawia, że klasa dostępna jest tylko dla klas z tego samego pakietu?
+a. public
+b. protected
+c. default (brak modyfikatora)
+d. private
+
+5. Jaki będzie wynik działania poniższego kodu?
+int num = 10;
+num++;
+System.out.println(num++);
+a. 10
+b. 11
+c. 12
+d. 13
+
+6. Która z pętli wykona się co najmniej raz?
+a. while
+b. do-while
+c. for
+d. for-each
+
+7. Który ze sposobów porównywania Stringów jest poprawny?
+a. str1 == str2
+b. str1 = str2
+c. str1.equals(str2)
+d. str1.equalsTo(str2)
+
+8. W jaki sposób poprawnie zainicjalizować tablicę wartościami 1, 2, 3 oraz 4?
+a. int[] arr = {1, 2, 3, 4};
+b. int[] arr = new int[4] {1, 2, 3, 4}
+c. int[] arr = new int[4]; arr = {1, 2, 3, 4};
+d. int arr[4] = {1, 2, 3, 4}
+
+9. Jaki będzie wynik działania poniższego kodu?
+String name = "Java";
+System.out.println(name.substring(0, 1));
+a. J
+b. Java
+c. null
+d. RuntimeException
+
+10. Do czego służy słowo kluczowe finally?
+a. do obsługi wyjątku
+b. do oznaczenia kodu, który wykona się zawsze, bez względu na to czy wystąpi wyjątek czy nie
+c. do oznaczenia kodu, który wykona się, gdy wystąpi wyjatek
+d. do zakończenia działania programu w przypadku wystapienia wyjątku
