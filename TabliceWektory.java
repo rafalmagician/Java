@@ -1,3 +1,5 @@
+package progPodstawy;
+
 import java.util.Scanner;
 
 public class TabliceWektory {

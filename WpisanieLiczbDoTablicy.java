@@ -1,3 +1,5 @@
+package progPodstawy;
+
 public class WpisanieLiczbDoTablicy {
     private int[] tab = new int[10];
     private Losowanie los = new Losowanie();

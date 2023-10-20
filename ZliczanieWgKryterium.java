@@ -1,4 +1,5 @@
-import java.util.Random;
+package progPodstawy;
+
 import java.util.Scanner;
 
 public class ZliczanieWgKryterium {

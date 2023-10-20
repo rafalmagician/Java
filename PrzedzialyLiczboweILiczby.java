@@ -1,3 +1,5 @@
-public class PrzedzialyLiczboweILiczby {
+package progPodstawy;
 
+public class PrzedzialyLiczboweILiczby {
+    
 }

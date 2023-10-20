@@ -1,14 +1,13 @@
 package progPodstawy;
 
-public class WyszukiwanieMaxMin {
+public class JednoczesneWyszukiwanieMaxMin {
     private int[] tab = new int[20];
     private Losowanie losowanie = new Losowanie();
     private int ile = 20;
 
     public void wypisanie() {
         wpisanieLiczb();
-        System.out.println("Max = " + max());
-        System.out.println("Min = " + min());
+        maxMin();
         System.out.println();
     }
 
@@ -21,24 +20,18 @@ public class WyszukiwanieMaxMin {
         System.out.println();
     }
 
-    private int max() {
-        int temp = tab[0];
+    private void maxMin() {
+        int max = tab[0];
+        int min = tab[0];
+
         for (int i = 0; i < tab.length; i++) {
-            if (tab[i] > temp) {
-                temp = tab[i];
+            if (max < tab[i]) {
+                max = tab[i];
+            }
+            if (min > tab[i]) {
+                min = tab[i];
             }
         }
-        return temp;
+        System.out.println("Max = " + max + ", Min = " + min);
     }
-
-    private int min() {
-        int temp = tab[0];
-        for (int i = 0; i < tab.length; i++) {
-            if (tab[i] < temp) {
-                temp = tab[i];
-            }
-        }
-        return temp;
-    }
-
 }
