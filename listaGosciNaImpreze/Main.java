@@ -8,6 +8,8 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        Party party = new Party();
+
         boolean shouldContinue = true;
         while (shouldContinue) {
 
@@ -20,8 +22,8 @@ public class Main {
 
             switch (scanner.nextInt()) {
 
-                case 1 -> System.out.println("Wybrano 1");
-                case 2 -> System.out.println("Wybrano 2");
+                case 1 -> party.displayGuests();
+                case 2 -> party.addGuest();
                 case 3 -> System.out.println("Wybrano 3");
                 case 4 -> System.out.println("Wybrano 4");
                 case 5 -> shouldContinue = false;
