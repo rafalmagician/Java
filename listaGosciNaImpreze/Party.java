@@ -1,11 +1,11 @@
 package listaGosciNaImpreze;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Party {
     private final List<Guest> guests = new ArrayList<>();
+    private final Set<String> meals = new HashSet<>();
+    private final HashMap<Integer, Guest> phoneToGuest = new HashMap<>();
     Scanner scanner = new Scanner(System.in);
 
     public void addGuest() {
@@ -30,7 +30,25 @@ public class Party {
 
         Guest guest = new Guest(name, meal, phoneNumber, isVegan);
 
+        meals.add(meal);
+        phoneToGuest.put(phoneNumber, guest);
         guests.add(guest);
+    }
+
+    public void displayGuestByPhoneNumber() {
+        System.out.print("Podaj numer telefonu: ");
+        Integer phoneNumber = Integer.valueOf(scanner.nextLine());
+        Guest guest = phoneToGuest.get(phoneNumber);
+
+        guest.displayGuestInformation();
+        System.out.println();
+    }
+
+    public void displayMeals() {
+        for (String e : meals) {
+            System.out.println(e);
+        }
+        System.out.println();
     }
 
     public void displayGuests() {

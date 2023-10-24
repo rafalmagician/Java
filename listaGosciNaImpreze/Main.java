@@ -24,8 +24,8 @@ public class Main {
 
                 case 1 -> party.displayGuests();
                 case 2 -> party.addGuest();
-                case 3 -> System.out.println("Wybrano 3");
-                case 4 -> System.out.println("Wybrano 4");
+                case 3 -> party.displayMeals();
+                case 4 -> party.displayGuestByPhoneNumber();
                 case 5 -> shouldContinue = false;
 
             }
