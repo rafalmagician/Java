@@ -1,7 +1,6 @@
 package ligaPilkaNozna;
 
 public class Team {
-    private final char sign = '#';
     private final String teamName;
     private final int game;
     private final int gainGoal;
@@ -16,12 +15,23 @@ public class Team {
         this.pkt = pkt;
     }
 
-    public char getSign() {
-        return sign;
+    public String getTeamName() {
+        return teamName;
     }
 
-    @Override
-    public String toString() {
-        return teamName + " " + game + " " + gainGoal + ":" + loseGoal + " " + pkt;
+    public int getGame() {
+        return game;
+    }
+
+    public int getGainGoal() {
+        return gainGoal;
+    }
+
+    public int getLoseGoal() {
+        return loseGoal;
+    }
+
+    public int getPkt() {
+        return pkt;
     }
 }

@@ -4,18 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class League_1 {
-    private List<Team> teamsOne = new ArrayList<>(8);
+    private final List<Team> teamsOne = new ArrayList<>(8);
 
-    private void addTeamsOneLeague() {
-        teamsOne.add(new Team("Kamień", 0, 0, 0, 0));
+    public void addTeamsOneLeague() {
+        teamsOne.add(new Team("Kamien", 0, 0, 0, 0));
         teamsOne.add(new Team("Elektro", 0, 0, 0, 0));
-        teamsOne.add(new Team("Roślina", 0, 0, 0, 0));
+        teamsOne.add(new Team("Roslina", 0, 0, 0, 0));
         teamsOne.add(new Team("Walka", 0, 0, 0, 0));
         teamsOne.add(new Team("Ziemia", 0, 0, 0, 0));
-        teamsOne.add(new Team("Ogień", 0, 0, 0, 0));
+        teamsOne.add(new Team("Ogien", 0, 0, 0, 0));
         teamsOne.add(new Team("Spinery", 0, 0, 0, 0));
         teamsOne.add(new Team("Karty", 0, 0, 0, 0));
     }
 
-    
+    public void displayTeamOneInformation() {
+        int i = 1;
+        System.out.println("#  DRUZYNA   M   B   P");
+        for (Team team : teamsOne) {
+            System.out.print(i + "  ");
+            if (team.getTeamName().length() == 7) {
+                System.out.println(team.getTeamName() + "   " + team.getGame() + "  " + team.getGainGoal() + ":" + team.getLoseGoal() + "  " + team.getPkt());
+            } else if (team.getTeamName().length() == 6) {
+                System.out.println(team.getTeamName() + "    " + team.getGame() + "  " + team.getGainGoal() + ":" + team.getLoseGoal() + "  " + team.getPkt());
+            } else if (team.getTeamName().length() == 5) {
+                System.out.println(team.getTeamName() + "     " + team.getGame() + "  " + team.getGainGoal() + ":" + team.getLoseGoal() + "  " + team.getPkt());
+            }
+            i++;
+        }
+        System.out.println();
+    }
 }
