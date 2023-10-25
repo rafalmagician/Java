@@ -6,12 +6,7 @@ public class Main {
 
         LeaguePokemon leaguePokemon = new LeaguePokemon();
         leaguePokemon.addTeamsToLeagues();
-
-        leaguePokemon.displayTableLeagueOne();
-
-        System.out.println();
-
-        leaguePokemon.displayTableLeagueTwo();
+        leaguePokemon.displayMenu();
 
     }
 

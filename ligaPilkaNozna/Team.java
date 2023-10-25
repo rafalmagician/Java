@@ -34,4 +34,8 @@ public class Team {
     public int getPkt() {
         return pkt;
     }
+
+    public String displayTeamInformation() {
+        return teamName + " " + game + " " + gainGoal + ":" + loseGoal + " " + pkt;
+    }
 }

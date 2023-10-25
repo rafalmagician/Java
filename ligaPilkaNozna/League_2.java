@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class League_2 {
-    private List<Team> teamsTwo = new ArrayList<>(10);
+    private final List<Team> teamsTwo = new ArrayList<>(10);
 
     public void addTeamsTwoLeague() {
         teamsTwo.add(new Team("Psycho", 0, 0, 0, 0));
@@ -19,7 +19,7 @@ public class League_2 {
         teamsTwo.add(new Team("Normalka II", 0, 0, 0, 0));
     }
 
-    public void displayTeamTwoInformation() {
+    public void displayTableTwoInformation() {
         int i = 1;
         System.out.println("#  DRUZYNA     M   B   P");
         for (Team team : teamsTwo) {

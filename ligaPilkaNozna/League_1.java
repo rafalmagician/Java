@@ -17,7 +17,7 @@ public class League_1 {
         teamsOne.add(new Team("Karty", 0, 0, 0, 0));
     }
 
-    public void displayTeamOneInformation() {
+    public void displayTableOneInformation() {
         int i = 1;
         System.out.println("#  DRUZYNA   M   B   P");
         for (Team team : teamsOne) {
