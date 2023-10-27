@@ -1,6 +1,6 @@
 package ligaPilkaNozna;
 
-public class Team {
+public class Team implements Comparable<Team> {
     private final String teamName;
     private final int game;
     private final int gainGoal;
@@ -35,7 +35,9 @@ public class Team {
         return pkt;
     }
 
-    public String displayTeamInformation() {
-        return teamName + " " + game + " " + gainGoal + ":" + loseGoal + " " + pkt;
+    // Sortowanie tabeli wg punktów
+    @Override
+    public int compareTo(Team o) {
+        return o.pkt - this.pkt;
     }
 }

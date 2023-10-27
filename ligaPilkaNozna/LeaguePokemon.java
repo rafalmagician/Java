@@ -26,6 +26,7 @@ public class LeaguePokemon {
             }
 
         }
+        System.out.println("Koniec programu!");
     }
 
     private void menu() {
@@ -33,6 +34,7 @@ public class LeaguePokemon {
         System.out.println("0 -> WYJSCIE");
         System.out.println("1 -> TABELA LIGA 1");
         System.out.println("2 -> TABELA LIGA 2");
+        System.out.println("3 -> SORTOWANIE LIGA 1");
         System.out.print("-> ");
     }
 }
