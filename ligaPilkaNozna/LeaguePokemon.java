@@ -1,5 +1,6 @@
 package ligaPilkaNozna;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class LeaguePokemon {
@@ -12,7 +13,7 @@ public class LeaguePokemon {
         league_2.addTeamsTwoLeague();
     }
 
-    public void displayMenu() {
+    public void displayMenu() throws IOException {
         boolean endApp = true;
         while (endApp) {
 
@@ -20,8 +21,9 @@ public class LeaguePokemon {
             switch (scanner.nextInt()) {
 
                 case 0 -> endApp = false;
-                case 1 -> league_1.displayTableOneInformation();
-                case 2 -> league_2.displayTableTwoInformation();
+                case 1 -> league_1.tableInformationLeagueOne();
+                //case 2 -> league_2.displayTableTwoInformation();
+                case 3 -> league_1.saveToFile();
 
             }
 
@@ -33,8 +35,8 @@ public class LeaguePokemon {
         System.out.println("Wybierz opcje: ");
         System.out.println("0 -> WYJSCIE");
         System.out.println("1 -> TABELA LIGA 1");
-        System.out.println("2 -> TABELA LIGA 2");
-        System.out.println("3 -> SORTOWANIE LIGA 1");
+        //System.out.println("2 -> TABELA LIGA 2");
+        System.out.println("3 -> ZAPIS DO PLIKU");
         System.out.print("-> ");
     }
 }

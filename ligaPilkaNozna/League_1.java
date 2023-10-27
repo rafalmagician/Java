@@ -1,5 +1,8 @@
 package ligaPilkaNozna;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,6 +18,8 @@ public class League_1 {
     private final Team karty = new Team("Karty", 0, 0, 0, 17);
 
     private final List<Team> teamsOne = new ArrayList<>();
+    private File file;
+    private PrintWriter printWriter;
 
     public void addTeamsOneLeague() {
         teamsOne.add(kamien);
@@ -27,7 +32,9 @@ public class League_1 {
         teamsOne.add(karty);
     }
 
-    public void displayTableOneInformation() {
+    public void tableInformationLeagueOne() {
+        sortTeamsLeagueOne();
+
         int i = 1;
         System.out.println("#  DRUZYNA   M   B   P");
         for (Team team : teamsOne) {
@@ -42,11 +49,20 @@ public class League_1 {
             i++;
         }
         System.out.println();
-
-        sortTeamsLeagueOne();
     }
 
     private void sortTeamsLeagueOne() {
         Collections.sort(teamsOne);
+    }
+
+    public void saveToFile() throws IOException {
+        file = new File("liga.txt");
+        if (!file.exists()) {
+            file.createNewFile();
+        } else {
+            printWriter = new PrintWriter(file);
+            printWriter.println(teamsOne.toString());
+            printWriter.close();
+        }
     }
 }
