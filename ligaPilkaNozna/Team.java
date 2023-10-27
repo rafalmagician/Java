@@ -40,4 +40,9 @@ public class Team implements Comparable<Team> {
     public int compareTo(Team o) {
         return o.pkt - this.pkt;
     }
+
+    @Override
+    public String toString() {
+        return "%s %d %d:%d %d".formatted(teamName, game, gainGoal, loseGoal, pkt) + "\n";
+    }
 }
