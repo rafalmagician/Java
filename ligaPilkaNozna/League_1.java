@@ -1,11 +1,13 @@
 package ligaPilkaNozna;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class League_1 {
     private final Team kamien = new Team("Kamien", 0, 0, 0, 15);
@@ -63,6 +65,18 @@ public class League_1 {
             printWriter = new PrintWriter(file);
             printWriter.println(teamsOne.toString());
             printWriter.close();
+        }
+    }
+
+    public void readFromFile() throws FileNotFoundException {
+        file = new File("liga.txt");
+        if (file.exists()) {
+            Scanner readFile = new Scanner(file);
+
+            while (readFile.hasNext()) {
+                System.out.println(readFile.nextLine());
+            }
+
         }
     }
 }
