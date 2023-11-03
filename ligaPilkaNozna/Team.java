@@ -2,10 +2,10 @@ package ligaPilkaNozna;
 
 public class Team implements Comparable<Team> {
     private final String teamName;
-    private final int game;
-    private final int gainGoal;
-    private final int loseGoal;
-    private final int pkt;
+    private int game;
+    private int gainGoal;
+    private int loseGoal;
+    private int pkt;
 
     public Team(String teamName, int game, int gainGoal, int loseGoal, int pkt) {
         this.teamName = teamName;
@@ -33,6 +33,22 @@ public class Team implements Comparable<Team> {
 
     public int getPkt() {
         return pkt;
+    }
+
+    public void setGame(int game) {
+        this.game += game;
+    }
+
+    public void setGainGoal(int gainGoal) {
+        this.gainGoal += gainGoal;
+    }
+
+    public void setLoseGoal(int loseGoal) {
+        this.loseGoal += loseGoal;
+    }
+
+    public void setPkt(int pkt) {
+        this.pkt += pkt;
     }
 
     // Sortowanie tabeli wg punktów

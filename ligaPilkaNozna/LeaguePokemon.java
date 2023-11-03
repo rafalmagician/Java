@@ -25,6 +25,7 @@ public class LeaguePokemon {
                 //case 2 -> league_2.displayTableTwoInformation();
                 case 3 -> league_1.saveToFile();
                 case 4 -> league_1.readFromFile();
+                case 5 -> league_1.mecz();
 
             }
 
@@ -39,6 +40,7 @@ public class LeaguePokemon {
         //System.out.println("2 -> TABELA LIGA 2");
         System.out.println("3 -> ZAPIS DO PLIKU");
         System.out.println("4 -> ODCZYT Z PLIKU");
+        System.out.println("5 -> MECZ");
         System.out.print("-> ");
     }
 }
