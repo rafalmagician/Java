@@ -4,8 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DwieCyfrySilni dwieCyfrySilni = new DwieCyfrySilni();
-        dwieCyfrySilni.silnia();
+        CzyUmieszPotegowac czyUmieszPotegowac = new CzyUmieszPotegowac();
+        czyUmieszPotegowac.potegowanie();
+
+        //DwieCyfrySilni dwieCyfrySilni = new DwieCyfrySilni();
+        //dwieCyfrySilni.silnia();
 
     }
 
