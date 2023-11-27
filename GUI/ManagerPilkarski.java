@@ -2,16 +2,15 @@ package GUI;
 
 import javax.swing.*;
 
-public class Main {
+public class ManagerPilkarski {
 
-    public static void main(String[] args) {
+    private JFrame frame = new JFrame();
 
-        JFrame frame = new JFrame();
+    public ManagerPilkarski() {
 
         frame.setVisible(true);
         frame.setSize(300, 300);
         frame.setTitle("Manager 2023");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
