@@ -13,7 +13,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int userNumber;
 
+        int lives = 3;
+
         do {
+            System.out.println("Zostalo zyc " + lives);
             System.out.print("Podaj liczbe: ");
             userNumber = scanner.nextInt();
 
@@ -21,10 +24,18 @@ public class Main {
                 System.out.println("Trafiles! Brawo :)");
                 break;
             } else {
-                System.out.println("Niestety, spruboj jeszcze raz!");
+                if (lives == 0) {
+                    System.out.println("Ilosc zyc = " + lives + ", przegrywasz :(");
+                    break;
+                } else {
+                    System.out.println("Niestety, spruboj jeszcze raz!");
+                    lives--;
+                }
             }
 
         } while (computerNumber != userNumber);
+
+        System.out.println("Koniec gry!");
 
     }
 
