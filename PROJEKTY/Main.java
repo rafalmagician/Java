@@ -28,7 +28,13 @@ public class Main {
                     System.out.println("Ilosc zyc = " + lives + ", przegrywasz :(");
                     break;
                 } else {
-                    System.out.println("Niestety, spruboj jeszcze raz!");
+                    if (userNumber > computerNumber) {
+                        System.out.println("Liczba jest za duza");
+                    } else {
+                        System.out.println("Liczba jest za mala");
+                    }
+
+                    System.out.println("spruboj jeszcze raz!");
                     lives--;
                 }
             }
