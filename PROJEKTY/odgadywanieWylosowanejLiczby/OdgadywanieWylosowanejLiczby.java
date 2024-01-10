@@ -1,69 +1,47 @@
 package PROJEKTY.odgadywanieWylosowanejLiczby;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class OdgadywanieWylosowanejLiczby {
     private Scanner scanner;
-    private int userNumber;
-    private int computerNumber;
-    private int lives;
-    private int count;
-    private LosowanieLiczby losowanieLiczby;
+    private int userChoise;
+
+    private Poziom1 poziom1;
+    private Poziom2 poziom2;
+    private Poziom3 poziom3;
 
     OdgadywanieWylosowanejLiczby() {
         this.scanner = new Scanner(System.in);
-        this.losowanieLiczby = new LosowanieLiczby();
-        this.lives = 3;
-        this.count = 0;
-        this.computerNumber = losowanieLiczby.losowanieLiczby();
+        this.poziom1 = new Poziom1(0, 10, 3);
+        this.poziom2 = new Poziom2(0, 50, 5);
+        this.poziom3 = new Poziom3(0, 100, 10);
     }
 
-    void odgadywanieWylosowanejLiczby() {
+    void graZgadywanieLiczby() {
 
-        System.out.println("Zgadnij liczbe z przedzialu [0;10].");
-        System.out.println("Masz " + lives + " proby; powodzenia :)\n");
+        menu();
+        System.out.print("Wybierz poziom: ");
+        userChoise = getNumber();
 
-        try {
-            do {
+        switch (userChoise) {
 
-                System.out.println("Zostalo zyc " + lives);
-                System.out.print("Podaj liczbe: ");
+            //case 0 -> ;
+            case 1 -> poziom1.poziom1();
+            case 2 -> poziom2.poziom2();
+            case 3 -> poziom3.poziom3();
 
-                    userNumber = getNumber();
-
-                    lives--;
-                    count++;
-
-                    if (computerNumber == userNumber) {
-                        System.out.println("Trafiles za " + count + " razem! Brawo :)\n");
-                        break;
-                    } else {
-                        if (lives == 0) {
-                            System.out.println("Ilosc zyc = " + lives + ", przegrywasz :(\n");
-                            break;
-                        } else {
-                            if (userNumber > computerNumber) {
-                                System.out.print("Liczba jest za duza. Spruboj jeszcze raz!\n");
-                            } else {
-                                System.out.print("Liczba jest za mala. Spruboj jeszcze raz!\n");
-                            }
-                        }
-                        System.out.println();
-                    }
-
-            } while (computerNumber != userNumber);
-        } catch (InputMismatchException e) {
-            System.out.println("Tylko liczba calkowita!\n");
-        } finally {
-            scanner.close();
         }
-
-        System.out.println("Koniec gry!");
 
     }
 
     private int getNumber() {
         return scanner.nextInt();
+    }
+
+    private void menu() {
+        System.out.println("0 - wyjscie");
+        System.out.println("1 - poziom [0;10]");
+        System.out.println("2 - poziom [0;50]");
+        System.out.println("3 - poziom [0;100]");
     }
 }
