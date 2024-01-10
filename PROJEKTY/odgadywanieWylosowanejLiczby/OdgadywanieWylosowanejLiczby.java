@@ -9,27 +9,40 @@ public class OdgadywanieWylosowanejLiczby {
     private Poziom1 poziom1;
     private Poziom2 poziom2;
     private Poziom3 poziom3;
+    private boolean x;
 
     OdgadywanieWylosowanejLiczby() {
         this.scanner = new Scanner(System.in);
         this.poziom1 = new Poziom1(0, 10, 3);
         this.poziom2 = new Poziom2(0, 50, 5);
         this.poziom3 = new Poziom3(0, 100, 10);
+        this.x = true;
     }
 
     void graZgadywanieLiczby() {
 
-        menu();
-        System.out.print("Wybierz poziom: ");
-        userChoise = getNumber();
+        try {
+            while (x) {
 
-        switch (userChoise) {
+                menu();
+                System.out.print("Wybierz poziom: ");
 
-            //case 0 -> ;
-            case 1 -> poziom1.poziom1();
-            case 2 -> poziom2.poziom2();
-            case 3 -> poziom3.poziom3();
+                userChoise = getNumber();
 
+                switch (userChoise) {
+
+                    case 0 -> x = false;
+                    case 1 -> poziom1.poziom1();
+                    case 2 -> poziom2.poziom2();
+                    case 3 -> poziom3.poziom3();
+
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Wystapil jakis blad!");
+        } finally {
+            scanner.close();
+            System.out.println("Koniec programu!");
         }
 
     }

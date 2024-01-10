@@ -56,10 +56,8 @@ public class Poziom1 {
         } catch (InputMismatchException e) {
             System.out.println("Tylko liczba calkowita!\n");
         } finally {
-            scanner.close();
+            System.out.println("Koniec poziomu 1");
         }
-
-        System.out.println("Koniec gry!");
 
     }
 
