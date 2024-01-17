@@ -14,9 +14,9 @@ public class OdgadywanieWylosowanejLiczby {
 
     OdgadywanieWylosowanejLiczby() {
         this.scanner = new Scanner(System.in);
-        this.poziom1 = new Poziom1(0, 10, 3);
-        this.poziom2 = new Poziom2(0, 50, 5);
-        this.poziom3 = new Poziom3(0, 100, 10);
+        this.poziom1 = new Poziom1(10, 3);
+        this.poziom2 = new Poziom2(50, 5);
+        this.poziom3 = new Poziom3(100, 10);
         this.shouldContinue = true;
     }
 

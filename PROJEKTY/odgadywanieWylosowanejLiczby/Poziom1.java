@@ -11,12 +11,12 @@ public class Poziom1 {
     private int count;
     private LosowanieLiczby losowanieLiczby;
 
-    Poziom1(int pocz, int kon, int live) {
+    Poziom1(int kon, int live) {
         this.scanner = new Scanner(System.in);
         this.losowanieLiczby = new LosowanieLiczby();
         this.lives = live;
         this.count = 0;
-        this.computerNumber = losowanieLiczby.losowanieLiczby(pocz, kon);
+        this.computerNumber = losowanieLiczby.losowanieLiczby(kon);
     }
 
     void poziom1() {
